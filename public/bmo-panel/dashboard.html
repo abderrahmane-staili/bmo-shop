@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2c">
+  <meta name="robots" content="noindex">
+  <title>Shop dashboard — &lt;/BMO&gt;</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="admin">
+  <header class="site-header"><nav class="nav wrap"><a class="logo" href="/">&lt;/BMO&gt;</a><div class="nav-links"><a href="/">View shop</a><button class="text-button" id="logout-button" type="button">Sign out</button></div></nav></header>
+  <main class="admin-layout wrap">
+    <div class="admin-heading"><div><span class="eyebrow">YOUR SHOP, AT A GLANCE</span><h1>Dashboard</h1></div><button class="button" id="new-product-button" type="button">+ Add product</button></div>
+    <p class="form-error" id="admin-error" role="alert" hidden></p>
+    <section class="stats-grid" aria-label="Shop statistics">
+      <article class="stat-card"><span>Total orders</span><strong data-count="totalOrders">0</strong></article>
+      <article class="stat-card"><span>Revenue</span><strong data-count="revenue">0 DH</strong></article>
+      <article class="stat-card"><span>New orders</span><strong data-count="newOrders">0</strong></article>
+    </section>
+    <section class="admin-section">
+      <div class="admin-section-heading"><h2>Orders</h2><div class="filters"><input id="order-search" type="search" placeholder="Search orders" aria-label="Search orders"><select id="order-filter" aria-label="Filter by status"><option value="">All statuses</option><option>new</option><option>confirmed</option><option>shipped</option><option>delivered</option><option>cancelled</option></select></div></div>
+      <div class="table-scroll"><table><thead><tr><th>Order</th><th>Customer</th><th>Phone</th><th>City</th><th>Product</th><th>Qty</th><th>Total</th><th>Payment</th><th>Status</th><th>Date</th><th></th></tr></thead><tbody id="orders-body"><tr><td colspan="11">Loading orders…</td></tr></tbody></table></div>
+    </section>
+    <section class="admin-section">
+      <div class="admin-section-heading"><h2>Products</h2></div>
+      <div class="table-scroll"><table><thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Image path</th><th></th></tr></thead><tbody id="admin-products-body"><tr><td colspan="5">Loading products…</td></tr></tbody></table></div>
+    </section>
+    <form class="product-editor" id="product-form" hidden>
+      <div class="admin-section-heading"><h2 id="product-form-title">Add product</h2><button class="text-button" id="close-product-form" type="button">Close</button></div>
+      <input type="hidden" name="id">
+      <div class="form-row"><label>Name<input name="name" required minlength="2" maxlength="100"></label><label>Category<select name="category"><option>food</option><option>clothes</option><option>shoes</option><option>pants</option></select></label></div>
+      <div class="form-row"><label>Price (DH)<input name="price" type="number" min="0" max="100000" step="0.01" required></label><label>Image path<input name="image" required pattern="/img/[A-Za-z0-9-]+\.(jpg|jpeg|png|webp)" placeholder="/img/product-name.jpg"></label></div>
+      <p class="form-error" id="product-error" role="alert" hidden></p><button class="button" type="submit">Save product</button>
+    </form>
+  </main>
+</body>
+</html>

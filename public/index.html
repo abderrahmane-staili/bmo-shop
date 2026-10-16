@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2c">
+  <title>&lt;/BMO&gt; — Good finds for every day</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="shop">
+  <header class="site-header">
+    <nav class="nav wrap" aria-label="Main navigation">
+      <a class="logo" href="/" aria-label="BMO home">&lt;/BMO&gt;</a>
+      <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="site-menu" id="site-menu">
+        <a class="nav-link" href="/" data-nav="home">Home</a>
+        <div class="nav-shop">
+          <button class="nav-link shop-toggle" id="shop-toggle" type="button" aria-expanded="false" aria-controls="shop-dropdown">Shop <span aria-hidden="true">⌄</span></button>
+          <div class="shop-dropdown" id="shop-dropdown">
+            <button type="button" data-filter="food">Food</button>
+            <button type="button" data-filter="clothes">Clothes</button>
+            <button type="button" data-filter="shoes">Shoes</button>
+            <button type="button" data-filter="pants">Pants</button>
+          </div>
+        </div>
+        <a class="nav-link" href="#products" data-nav="products">Best sellers</a>
+        <a class="nav-link" href="#about" data-nav="about">About</a>
+        <a class="nav-link" href="#contact" data-nav="contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-inner wrap">
+        <span class="eyebrow hero-copy">GOOD THINGS, EVERY DAY</span>
+        <h1 class="hero-copy">Everyday essentials.<br><span>Extraordinary finds.</span></h1>
+        <p class="hero-copy">Thoughtfully picked favorites for wherever the day takes you.</p>
+        <a class="button hero-cta" href="#products">Explore best sellers <span aria-hidden="true">↘</span></a>
+      </div>
+      <div class="hero-orb orb-one" aria-hidden="true"></div>
+      <div class="hero-orb orb-two" aria-hidden="true"></div>
+      <div class="hero-orb orb-three" aria-hidden="true"></div>
+    </section>
+    <section class="shop-section wrap" id="products">
+      <div class="section-title"><div><span class="eyebrow">THE PEOPLE'S PICKS</span><h2>Best sellers</h2></div><p>Little upgrades. Big everyday energy.</p></div>
+      <div class="filter-chips" role="group" aria-label="Filter products by category">
+        <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter-chip" type="button" data-filter="food" aria-pressed="false">Food</button>
+        <button class="filter-chip" type="button" data-filter="clothes" aria-pressed="false">Clothes</button>
+        <button class="filter-chip" type="button" data-filter="shoes" aria-pressed="false">Shoes</button>
+        <button class="filter-chip" type="button" data-filter="pants" aria-pressed="false">Pants</button>
+      </div>
+      <div class="product-grid" id="product-grid" aria-live="polite"></div>
+      <p class="notice" id="shop-error" role="alert" hidden></p>
+    </section>
+    <section class="about-section" id="about">
+      <div class="about-inner wrap">
+        <div><span class="eyebrow">A LITTLE ABOUT US</span><h2>Good stuff, chosen with care.</h2></div>
+        <p>BMO brings together everyday favorites that feel good to use, wear, and share. Thoughtful picks, straightforward prices, and a little more joy in the daily routine.</p>
+      </div>
+    </section>
+    <section class="contact-section wrap" id="contact">
+      <div class="contact-heading"><span class="eyebrow">WE'RE HERE TO HELP</span><h2>Say hello.</h2></div>
+      <div class="contact-cards">
+        <a class="contact-card" href="https://wa.me/0000000000" target="_blank" rel="noopener noreferrer"><span class="contact-icon">↗</span><span><small>WhatsApp</small><strong>Chat with us</strong></span></a>
+        <a class="contact-card" href="mailto:hello@bmo.shop"><span class="contact-icon">@</span><span><small>Email</small><strong>hello@bmo.shop</strong></span></a>
+        <div class="contact-card"><span class="contact-icon">⌖</span><span><small>Based in</small><strong>Casablanca, Morocco</strong></span></div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner wrap"><a class="logo" href="/">&lt;/BMO&gt;</a><p>Everyday, made a little better.</p><small>© 2026 &lt;/BMO&gt;. All rights reserved.</small></div>
+  </footer>
+</body>
+</html>

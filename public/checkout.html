@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101a2c">
+  <title>Checkout — &lt;/BMO&gt;</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body data-page="checkout">
+  <header class="site-header"><nav class="nav wrap"><a class="logo" href="/">&lt;/BMO&gt;</a><a class="checkout-return" href="/">← Keep browsing</a></nav></header>
+  <main class="checkout-layout wrap">
+    <section class="checkout-main">
+      <span class="eyebrow">ALMOST YOURS</span><h1>Checkout</h1>
+      <div class="summary-card" id="checkout-summary"><div class="summary-skeleton"></div><p>Loading your pick…</p></div>
+      <form class="checkout-form" id="checkout-form">
+        <h2>Delivery details</h2>
+        <label>Full name<input name="fullName" required minlength="2" maxlength="100" autocomplete="name"></label>
+        <label>Phone number<input name="phone" required type="tel" minlength="7" maxlength="20" autocomplete="tel"></label>
+        <div class="form-row"><label>City<input name="city" required minlength="2" maxlength="80" autocomplete="address-level2"></label><label>Address<input name="address" required minlength="5" maxlength="250" autocomplete="street-address"></label></div>
+        <fieldset><legend>Payment method</legend><label class="radio-option"><input type="radio" name="paymentMethod" value="Cash on delivery" checked> Cash on delivery</label><label class="radio-option"><input type="radio" name="paymentMethod" value="Card"> Card (secure Stripe Checkout)</label></fieldset>
+        <p class="form-error" id="checkout-error" role="alert" hidden></p>
+        <button class="button button-wide" type="submit">Place order</button>
+      </form>
+      <section class="success-card" id="order-success" hidden aria-live="polite"><span class="success-icon">✓</span><h2>Thank you for your order!</h2><p id="success-message"></p><a class="button" href="/">Back to the shop</a></section>
+    </section>
+    <aside class="checkout-aside"><span class="eyebrow">A LITTLE JOY, ON ITS WAY</span><p>We’ll confirm your order and get it moving as soon as possible.</p><span class="aside-spark">✳</span></aside>
+  </main>
+  <footer class="site-footer"><div class="footer-inner wrap"><a class="logo" href="/">&lt;/BMO&gt;</a><small>Secure checkout · © 2026 &lt;/BMO&gt;</small></div></footer>
+</body>
+</html>
