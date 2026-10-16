@@ -1,8 +1,8 @@
 <div align="center">
 
-# </BMO> Shop
+<h1>&lt;/BMO&gt; Shop</h1>
 
-**A lightweight, full-stack online shop: storefront, checkout, and a hidden admin dashboard.**
+<h2>A lightweight, full-stack online shop: storefront, checkout, and a hidden admin dashboard.</h2>
 
 ![Node.js](https://img.shields.io/badge/Node.js-20-339933?logo=node.js&logoColor=white)
 ![Express](https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white)
