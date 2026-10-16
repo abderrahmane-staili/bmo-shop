@@ -1,124 +1,167 @@
+# 🛍️ BMO Shop — Full-Stack E-Commerce Platform
+
 <div align="center">
 
-<h1>&lt;/BMO&gt; Shop</h1>
+# `</BMO>` Shop
 
-<h2>A lightweight, full-stack online shop: storefront, checkout, and a hidden admin dashboard.</h2>
+### A Modern, Lightweight & Full-Stack Online Store
+
+A complete e-commerce platform featuring a product storefront, shopping cart, checkout integration, and an admin dashboard for managing your online business.
 
 <p>
-  <img src="https://img.shields.io/badge/Node.js-20-339933?logo=node.js&logoColor=white" alt="Node.js" height="60">
-  <img src="https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white" alt="Express" height="60">
-  <img src="https://img.shields.io/badge/SQLite-3-003B57?logo=sqlite&logoColor=white" alt="SQLite" height="60">
-  <img src="https://img.shields.io/badge/Stripe-Checkout-635BFF?logo=stripe&logoColor=white" alt="Stripe" height="60">
-  <img src="https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white" alt="Docker" height="60">
-  <img src="https://img.shields.io/badge/License-MIT-green" alt="License" height="60">
+  <img src="https://img.shields.io/badge/Node.js-20-339933?logo=node.js&logoColor=white&style=for-the-badge" alt="Node.js"/>
+  <img src="https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white&style=for-the-badge" alt="Express"/>
+</p>
+<p>
+  <img src="https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite&logoColor=white&style=for-the-badge" alt="SQLite"/>
+  <img src="https://img.shields.io/badge/Stripe-Checkout-635BFF?logo=stripe&logoColor=white&style=for-the-badge" alt="Stripe"/>
+</p>
+<p>
+  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white&style=for-the-badge" alt="Docker"/>
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License"/>
 </p>
 
 </div>
 
 ---
 
+## 📌 Overview
+
+**BMO Shop** is a lightweight e-commerce application designed to provide a simple shopping experience and practical store management tools. It combines a customer-facing storefront with backend services and an administrative interface.
+
 ## ✨ Features
 
-- 🛍️ **Storefront**: product grid with category filters, scroll animations, and a responsive navbar
-- 🧾 **Checkout**: cash on delivery or card payment through hosted Stripe Checkout
-- 🔐 **Hidden admin panel**: not linked anywhere on the public site, protected by sessions and bcrypt
-- 📊 **Dashboard**: stats, orders table, status updates, and full product management (add / edit / delete)
-- 🎨 **Modern UI**: animated gradient hero, 3D card tilt, skeleton loaders, `prefers-reduced-motion` support
-- 🐳 **Docker-ready**: one command to run everything
+| Feature | Description |
+|---|---|
+| 🛒 Online Store | Browse products and view prices |
+| 📦 Product Management | Manage product information and inventory |
+| 🛍️ Shopping Cart | Add, remove, and manage cart items |
+| 💳 Checkout | Integrate payments through Stripe Checkout |
+| 🔐 Admin Dashboard | Manage store content through an administrative interface |
+| 🗄️ Database | Store application data using SQLite |
+| ⚙️ REST API | Handle requests through an Express backend |
+| 🐳 Docker Support | Simplify application deployment |
 
-## 🧰 Tech Stack
+## 🏗️ Architecture
 
-| Layer     | Technology                                   |
-|-----------|----------------------------------------------|
-| Backend   | Node.js, Express                             |
-| Database  | SQLite (`better-sqlite3`)                    |
-| Auth      | `express-session`, `bcrypt`, rate limiting   |
-| Payments  | Stripe Checkout (hosted page)                |
-| Security  | `helmet`, parameterized SQL, input validation |
-| Frontend  | Vanilla HTML, CSS, JavaScript                |
-| DevOps    | Docker, Docker Compose                       |
-
-## 📁 Project Structure
-
+```text
+BMO Shop
+├── Storefront
+│   ├── Product Catalog
+│   ├── Shopping Cart
+│   └── Checkout
+├── Admin Dashboard
+│   ├── Product Management
+│   └── Order Management
+├── Backend
+│   ├── Node.js
+│   ├── Express REST API
+│   └── Stripe Integration
+├── Database
+│   └── SQLite
+└── Deployment
+    └── Docker
 ```
-bmo-landing/
-├── server.js
-├── db.js
-├── Dockerfile
-├── docker-compose.yml
-├── .env
-├── package.json
-└── public/
-    ├── index.html
-    ├── checkout.html
-    ├── style.css
-    ├── app.js
-    └── img/
-```
+
+## 🛠️ Tech Stack
+
+- **Runtime:** Node.js 20
+- **Backend:** Express.js 4
+- **Database:** SQLite
+- **Payments:** Stripe Checkout
+- **Containerization:** Docker
+- **API Style:** REST
 
 ## 🚀 Getting Started
 
-**1. Clone the repository**
+### Prerequisites
+
+- Node.js 20 or compatible version
+- npm
+- Docker (optional)
+
+### Installation
 
 ```bash
-git clone https://github.com/<your-username>/bmo-shop.git
+# Clone the repository
+git clone https://github.com/YOUR_USERNAME/bmo-shop.git
+
+# Enter the project directory
 cd bmo-shop
-```
 
-**2. Configure environment variables**
-
-Create a `.env` file:
-
-```env
-ADMIN_USER=your_admin_username
-ADMIN_PASS=your_strong_password
-SESSION_SECRET=a-long-random-string
-STRIPE_SECRET_KEY=sk_test_...
-STRIPE_PUBLIC_KEY=pk_test_...
-PUBLIC_URL=http://localhost:3000
-```
-
-**3. Run with Docker**
-
-```bash
-docker compose up --build
-```
-
-**Or run locally**
-
-```bash
+# Install dependencies
 npm install
+
+# Start the application
 npm start
 ```
 
-Open **http://localhost:3000** 🎉
+Replace `YOUR_USERNAME` with your GitHub username. Ensure the start command matches your project's `package.json`.
 
-## 🔑 Admin Panel
+### Environment Variables
 
-The admin area is intentionally hidden from the public site. The login path is printed in the server startup log. Credentials come from `.env`.
+Create a `.env` file and configure the variables required by your application.
 
-> ⚠️ Always change the default credentials and `SESSION_SECRET` before deploying.
+```env
+PORT=3000
+STRIPE_SECRET_KEY=your_stripe_secret_key
+```
 
-## 💳 Payments
+Keep secret keys private. Never commit your `.env` file or production credentials.
 
-Card payments use **Stripe Checkout**. Card numbers never touch this server or its database, and payouts are configured in your Stripe dashboard. Without Stripe keys, cash on delivery still works.
+## 🔌 API Example
+
+A typical REST API endpoint could return the available products:
+
+```http
+GET /api/products
+```
+
+Example response:
+
+```json
+{
+  "success": true,
+  "products": []
+}
+```
+
+Actual routes and response formats depend on the implementation.
+
+## 🐳 Docker
+
+If your project includes a configured `Dockerfile`, build and run the application with:
+
+```bash
+docker build -t bmo-shop .
+docker run --env-file .env -p 3000:3000 bmo-shop
+```
 
 ## 🔒 Security
 
-- Passwords hashed with bcrypt
-- HTTP-only session cookies
-- Login rate limiting
-- Helmet security headers
-- Parameterized SQL queries only
-- Output escaping against XSS
+- Store credentials in environment variables.
+- Validate user input on the server.
+- Protect administrative routes with authentication and authorization.
+- Verify Stripe webhook signatures when handling payment events.
+- Use HTTPS in production.
 
 ## 🗺️ Roadmap
 
-- [ ] Persistent session store
-- [ ] Email notifications for new orders
-- [ ] Multi-language support (AR / FR / EN)
-- [ ] Product image upload from the admin panel
+- [x] Storefront and backend foundation
+- [x] Database integration
+- [x] Checkout integration
+- [ ] Enhanced inventory management
+- [ ] Order tracking and reporting
+- [ ] Automated testing and CI/CD
 
 ## 📄 License
 
-Released under the [MIT License](LICENSE).
+This project is distributed under the MIT License. Add a `LICENSE` file to the repository if you intend to publish it under that license.
+
+---
+
+<div align="center">
+
+**Built with ❤️ for modern online shopping.**
+
+</div>
