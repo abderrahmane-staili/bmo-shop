@@ -8,17 +8,27 @@
 
 A complete e-commerce platform featuring a product storefront, shopping cart, checkout integration, and an admin dashboard for managing your online business.
 
+<div align="center">
+
 <p>
-  <img src="https://img.shields.io/badge/Node.js-20-339933?logo=node.js&logoColor=white&style=for-the-badge" alt="Node.js"/>
-  <img src="https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white&style=for-the-badge" alt="Express"/>
-</p>
-<p>
-  <img src="https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite&logoColor=white&style=for-the-badge" alt="SQLite"/>
-  <img src="https://img.shields.io/badge/Stripe-Checkout-635BFF?logo=stripe&logoColor=white&style=for-the-badge" alt="Stripe"/>
-</p>
-<p>
-  <img src="https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white&style=for-the-badge" alt="Docker"/>
-  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License"/>
+  <a href="https://nodejs.org/">
+    <img src="https://img.shields.io/badge/Node.js-20-339933?logo=node.js&logoColor=white&style=for-the-badge" alt="Node.js" />
+  </a>
+  <a href="https://expressjs.com/">
+    <img src="https://img.shields.io/badge/Express-4-000000?logo=express&logoColor=white&style=for-the-badge" alt="Express" />
+  </a>
+  <a href="https://www.sqlite.org/">
+    <img src="https://img.shields.io/badge/SQLite-Database-003B57?logo=sqlite&logoColor=white&style=for-the-badge" alt="SQLite" />
+  </a>
+  <a href="https://stripe.com/">
+    <img src="https://img.shields.io/badge/Stripe-Checkout-635BFF?logo=stripe&logoColor=white&style=for-the-badge" alt="Stripe" />
+  </a>
+  <a href="https://www.docker.com/">
+    <img src="https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white&style=for-the-badge" alt="Docker" />
+  </a>
+  <a href="https://opensource.org/license/mit">
+    <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="MIT License" />
+  </a>
 </p>
 
 </div>
